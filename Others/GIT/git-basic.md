@@ -67,4 +67,35 @@ git commit -m "message"
 跳过暂存 提交所有更改的跟踪过的文件
 ```
 git commit -a -m "message"
-``` 
+```
+
+### 移除文件
+```
+# 移除文件
+rm file
+
+# 从git中移除文件
+git rm file
+
+# 强制删除文件 （不能恢复）
+git rm -f file
+
+# git取消跟踪
+git rm --cached file
+
+# glob模式
+    #删除 log目录下所有的.log文件
+    git rm log/\*.log
+    # 删除所有以-结尾文件
+    git rm \*-
+```
+
+### 移动文件 
+```
+git mv  fileform  fileto
+
+git mv ===
+    mv fileform  fileto
+    git rm fileform
+    git add fileto 
+```
